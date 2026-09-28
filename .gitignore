@@ -1,0 +1,75 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Python & Virtual Environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Local Private Vaults (Keep DesignAcademy Studio public demo, ignore user/client dossiers)
+vault/Clients/*
+!vault/Clients/DesignAcademy_Studio/
+!vault/Clients/.gitkeep
+
+# Never track third-party OAuth tokens. clientCredentialsService writes real
+# customer secrets to this filename in plaintext, and the un-ignore above would
+# otherwise sweep the demo client's file (and anything later written into it)
+# into the repo. This rule sits below the un-ignore so it wins.
+vault/**/Credentials.json
+
+# Consent evidence contains visitor user-agents and session ids. It is real
+# audit data about real people and does not belong in the repo.
+vault/Compliance/
+vault/Dossiers/*
+!vault/Dossiers/DesignAcademy_Studio.md
+!vault/Dossiers/.gitkeep
+vault/Leads/*
+!vault/Leads/lead_jm_901.md
+!vault/Leads/lead_jason_miller.md
+!vault/Leads/.gitkeep
+
+# Private Local Profiles & Dossier Presets
+data/local_profile.json
+.claude-flow/
+.claude/
+apps/orchestrator/data/
+apps/orchestrator/vault/
+
+
+
+.vercel
+.env*
+
+# Third-party reference PDFs: keep locally, never publish.
+*.pdf
+!docs/submission/*.pdf
+.neon
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
