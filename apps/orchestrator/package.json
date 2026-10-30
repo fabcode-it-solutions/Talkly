@@ -4,9 +4,9 @@
   "description": "Backend voice agent orchestrator, token gateway, and tool dispatcher",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && cp -r src/public dist/ 2>/dev/null || :",
-    "start": "node dist/index.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "node init && tsc && cp -r src/public dist/ 2>/dev/null || :",
+    "start": "node init && node dist/index.js",
+    "dev": "node init && ts-node-dev --respawn --transpile-only src/index.ts",
     "test": "jest"
   },
   "dependencies": {

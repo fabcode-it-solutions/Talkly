@@ -4,8 +4,8 @@
   "private": true,
   "description": "AI Growth Operator Voice OS for the AssemblyAI Voice Agent Hackathon on lablab.ai",
   "scripts": {
-    "dev:orchestrator": "npm --prefix apps/orchestrator run dev",
-    "dev:web": "npm --prefix apps/web run dev",
+    "dev:orchestrator": "node init && npm --prefix apps/orchestrator run dev",
+    "dev:web": "node init && npm --prefix apps/web run dev",
     "test:evals": "npm --prefix packages/evals test",
     "docker:up": "docker compose up --build",
     "docker:down": "docker compose down"
